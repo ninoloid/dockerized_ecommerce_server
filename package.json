@@ -1,0 +1,32 @@
+{
+  "name": "ec_cms",
+  "version": "1.0.0",
+  "description": "Hacktiv8 E-Commerce CMS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node bin/http.js",
+    "test": "NODE_ENV=testing jest --runInBand --detectOpenHandles",
+    "dev": "NODE_ENV=development nodemon bin/http.js",
+    "reset": "sequelize db:migrate:undo:all && sequelize db:migrate && sequelize db:seed:all"
+  },
+  "author": "Ahmad MSA",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.621.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "pg": "^7.18.1",
+    "sequelize": "^5.21.4",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^25.1.0",
+    "supertest": "^4.0.2"
+  }
+}

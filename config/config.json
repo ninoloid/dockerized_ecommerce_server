@@ -1,0 +1,19 @@
+{
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "db_ecommerce",
+    "host": "db",
+    "dialect": "postgres"
+  },
+  "testing": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "db_ecommerce_test",
+    "host": "db",
+    "dialect": "postgres"
+  }
+}

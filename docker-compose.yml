@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: "postgres:12"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgData:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRESS_DB: db_ecommerce
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/restify-pg
+    environment:
+      DB_HOST: db
